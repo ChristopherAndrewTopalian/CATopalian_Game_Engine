@@ -14,6 +14,7 @@ Features
 * Camera follows player
 * Minimap
 * Custom Sound Efx Engine
+* Custom Sound Loading System
 * Speedometer
 * Odometer
 * Draggable Elements
