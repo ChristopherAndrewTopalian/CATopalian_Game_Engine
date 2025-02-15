@@ -22,10 +22,11 @@ Features
 ---
 
 How to Download this Engine
-1. Click the green CODE Button on this github page
-2. Save the Zip File
-3. Extract All
-4. Double click the html file to start the game engine
+1. Click the green Code Button on this github page
+2. Choose Download ZIP
+3. Save the Zip File
+4. Extract All
+5. Double click the html file to start the game engine
 
 //----//
 
