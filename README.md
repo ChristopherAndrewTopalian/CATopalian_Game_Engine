@@ -31,7 +31,7 @@ How to Download this Engine
 
 ---
 
-Minimap
+#### Minimap  
 ![minimap](https://github.com/ChristopherAndrewTopalian/Topalian_Game_Engine/blob/main/src/media/textures/screenshots/minimap.PNG)
 
 //----//
