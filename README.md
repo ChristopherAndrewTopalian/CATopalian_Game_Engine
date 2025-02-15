@@ -10,6 +10,8 @@ https://github.com/ChristopherAndrewTopalian/Topalian_Game_Engine
 
 Features  
 * Collision Detection
+* Controls
+* Camera follows player
 * Minimap
 * Custom Sound Efx Engine
 * Speedometer
