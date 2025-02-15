@@ -6,6 +6,17 @@ JavaScript Game Engine featuring a pure functional data driven object oriented d
 
 https://github.com/ChristopherAndrewTopalian/Topalian_Game_Engine
 
+---
+
+Features  
+* Collision Detection
+* Minimap
+* Custom Sound Efx Engine
+* Speedometer
+* Odometer
+* Draggable Elements
+* Tile Making
+
 //----//
 
 // Dedicated to God the Father  
