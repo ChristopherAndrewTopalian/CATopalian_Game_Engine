@@ -2,11 +2,11 @@
 
 let dataPeriodicElements = [
 {
-name: "Hydrogen",
-number: "1",
-abbreviation: "H",
-url: "https://en.wikipedia.org/wiki/Hydrogen",
-tag: "chemicalElement"
+    name: "Hydrogen",
+    number: "1",
+    abbreviation: "H",
+    url: "https://en.wikipedia.org/wiki/Hydrogen",
+    tag: "chemicalElement"
 },
 {
 name: "Helium",

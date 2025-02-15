@@ -2,6 +2,41 @@
 
 function makeMinimap()
 {
+    let minMaxContainer = ce('div');
+    minMaxContainer.style.position = 'fixed';
+    minMaxContainer.style.left = '160px';
+    minMaxContainer.style.bottom = '0px';
+    minMaxContainer.style.zIndex = 2001;
+    minMaxContainer.style.display = 'flex';
+    minMaxContainer.style.flexDirection = 'row';
+    ba(minMaxContainer);
+
+    //-//
+
+    let minimize = ce('button');
+    minimize.className = 'buttonSlim';
+    minimize.textContent = '_';
+    minimize.onclick = function()
+    {
+        ge('minimap').style.display = 'none';
+        clickSound2();
+    };
+    minMaxContainer.append(minimize);
+
+    //-//
+
+    let maximize = ce('button');
+    maximize.className = 'buttonSlim';
+    maximize.textContent = 'O';
+    maximize.onclick = function()
+    {
+        ge('minimap').style.display = 'block';
+        clickSound2();
+    };
+    minMaxContainer.append(maximize);
+
+    //-//
+
     let minimapDiv = ce('div');
     minimapDiv.id = 'minimap';
     minimapDiv.className = 'minimapDiv';

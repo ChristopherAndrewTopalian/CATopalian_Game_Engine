@@ -8,9 +8,8 @@ let dataObjectsPeriodicTable =
         positionType: "absolute",
         x: 603,
         y: 353,
-        width: 65,
-        height: 60,
-
+        width: 80,
+        height: 80,
         text: "IRON <br> 26 <br> Fe",
         id: "boxIron",
         styleName: "boxStyle001"
@@ -22,8 +21,8 @@ let dataObjectsPeriodicTable =
         positionType: "absolute",
         x: 855,
         y: 354,
-        width: 65,
-        height: 60,
+        width: 80,
+        height: 80,
         text: "COPPER <br> 29 <br> Cu",
         id: "boxCopper",
         styleName: "boxStyle001"
@@ -35,8 +34,8 @@ let dataObjectsPeriodicTable =
         positionType: "absolute",
         x: 855,
         y: 437,
-        width: 65,
-        height: 60,
+        width: 80,
+        height: 80,
         text: "SILVER <br> 47 <br> Ag",
         id: "boxSilver",
         styleName: "boxStyle001"
@@ -48,8 +47,8 @@ let dataObjectsPeriodicTable =
         positionType: "absolute",
         x: 855,
         y: 522,
-        width: 65,
-        height: 60,
+        width: 80,
+        height: 80,
         text: "GOLD <br> 79 <br> Au",
         id: "boxGold",
         styleName: "boxStyle001"

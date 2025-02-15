@@ -21,6 +21,7 @@ function makePlayer(whichPlayer)
     player.style.margin = '0px';
     player.style.padding = '0px';
     player.style.border = 'none';
+    player.style.boxSizing = 'border-box';
     ba(player);
 }
 

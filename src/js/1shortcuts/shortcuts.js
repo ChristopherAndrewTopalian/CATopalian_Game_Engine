@@ -24,6 +24,12 @@ function cl(whichMessage)
     return result;
 }
 
+function ct(whichText)
+{
+    let result = document.createTextNode(whichText);
+    return result;
+}
+
 //----//
 
 // Dedicated to God the Father

@@ -12,7 +12,7 @@ let dataFloors =
         height: 50,
         text: "floor1",
         id: "floor1",
-        styleName: "boxStyle001"
+        styleName: "boxStyle002"
     },
 
     {
@@ -25,7 +25,7 @@ let dataFloors =
         height: 20,
         text: "floor2",
         id: "floor2",
-        styleName: "boxStyle001"
+        styleName: "boxStyle002"
     },
 
     {
@@ -38,7 +38,7 @@ let dataFloors =
         height: 20,
         text: "floor3",
         id: "floor3",
-        styleName: "boxStyle001"
+        styleName: "boxStyle002"
     }
 ];
 
