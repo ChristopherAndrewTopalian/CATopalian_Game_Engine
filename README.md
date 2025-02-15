@@ -22,7 +22,7 @@ Features
 ---
 
 How to Download this Engine
-1. Click the green Clone Button
+1. Click the green CODE Button on this github page
 2. Save the Zip File
 3. Extract All
 4. Double click the html file to start the game engine
