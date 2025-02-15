@@ -29,6 +29,11 @@ How to Download this Engine
 4. Extract All
 5. Double click the html file to start the game engine
 
+---
+
+Minimap
+![minimap](https://github.com/ChristopherAndrewTopalian/Topalian_Game_Engine/blob/main/src/media/textures/screenshots/minimap.PNG)
+
 //----//
 
 // Dedicated to God the Father  
