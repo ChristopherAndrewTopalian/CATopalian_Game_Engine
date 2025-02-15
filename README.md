@@ -19,6 +19,14 @@ Features
 * Draggable Elements
 * Tile Making
 
+---
+
+How to Download this Engine
+1. Click the green Clone Button
+2. Save the Zip File
+3. Extract All
+4. Double click the html file to start the game engine
+
 //----//
 
 // Dedicated to God the Father  
