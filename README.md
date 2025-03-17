@@ -6,7 +6,7 @@ JavaScript Game Engine featuring a pure functional data driven object oriented d
 
 USE APP: https://christopherandrewtopalian.github.io/CATopalian_Game_Engine/CATopalian_Game_Engine.html  
 
-CODE: https://github.com/ChristopherAndrewTopalian/Topalian_Game_Engine
+CODE: https://github.com/ChristopherAndrewTopalian/CATopalian_Game_Engine
 
 ---
 
