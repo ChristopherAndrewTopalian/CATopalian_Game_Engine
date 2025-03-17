@@ -1,4 +1,4 @@
-# Topalian Game Engine
+# CATopalian Game Engine
 
 JavaScript Game Engine featuring a pure functional data driven object oriented design.
 
