@@ -43,7 +43,7 @@ function makeDedication()
     //-//
 
     let engineText = ce('div');
-    engineText.textContent = 'TOPALIAN GAME ENGINE';
+    engineText.textContent = 'CATOPALIAN GAME ENGINE';
     engineText.style.fontWeight = 'bold';
     engineText.style.fontSize = 24 + 'px';
     subDiv.append(engineText);
@@ -55,8 +55,8 @@ function makeDedication()
     //-//
 
     let engineLink = ce('a');
-    engineLink.textContent = 'https://github.com/ChristopherAndrewTopalian/Topalian_Game_Engine';
-    engineLink.href = 'https://github.com/ChristopherAndrewTopalian/Topalian_Game_Engine';
+    engineLink.textContent = 'https://github.com/ChristopherAndrewTopalian/CATopalian_Game_Engine';
+    engineLink.href = 'https://github.com/ChristopherAndrewTopalian/CATopalian_Game_Engine';
     engineLink.target = '_blank';
     engineLink.style.fontWeight = 'bold';
     subDiv.append(engineLink);
