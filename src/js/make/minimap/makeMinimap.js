@@ -43,8 +43,8 @@ function makeMinimap()
     minimapDiv.style.position = 'fixed';
     minimapDiv.style.left = '5px';
     minimapDiv.style.bottom = '4px';
-    minimapDiv.style.width = '150px';
-    minimapDiv.style.height = '150px';
+    minimapDiv.style.width = '100px';
+    minimapDiv.style.height = '100px';
     minimapDiv.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
     minimapDiv.style.border = 'solid';
     minimapDiv.style.borderWidth = '1px';
