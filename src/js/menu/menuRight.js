@@ -2,15 +2,23 @@
 
 function menuRight()
 {
-    if (ge("menuRight"))
+    let menuId = 'menuRight';
+
+    // if menuId exists
+    if (ge(menuId))
     {
-        ge("menuRight").remove();
+        // remove menuId
+        ge(menuId).remove();
     }
+
+    //-//
 
     let divHeight = 100;
 
+    //-//
+
     let menuRightDiv = ce("div");
-    menuRightDiv.id = 'menuRight';
+    menuRightDiv.id = menuId;
     menuRightDiv.style.position = "fixed";
     menuRightDiv.style.right = 0 + "px";
     menuRightDiv.style.top = 17 + "px";menuRightDiv.style.margin = '2px';
@@ -21,7 +29,7 @@ function menuRight()
     //-//
 
     let closeButton = ce("button");
-    closeButton.innerHTML = "_";
+    closeButton.textContent = "_";
     closeButton.className = "buttonStyle001";
     closeButton.style.position = "absolute";
     closeButton.style.right = 30 + "px";
@@ -30,7 +38,7 @@ function menuRight()
     {
         audioPlay("sfx_warp_001", 1.0);
 
-        // minimize height to show only _ and □
+        // minimize height to show only _ and O
         ge("menuRightSubDiv").style.height = 0 + "px";
 
         ge("menuRightSubDiv").style.display = 'none';
@@ -40,7 +48,7 @@ function menuRight()
     //-//
 
     let maximizeButton = ce("button");
-    maximizeButton.innerHTML = "O";
+    maximizeButton.textContent = "O";
     maximizeButton.className = "buttonStyle001";
     maximizeButton.style.position = "absolute";
     maximizeButton.style.right = 0 + "px";
