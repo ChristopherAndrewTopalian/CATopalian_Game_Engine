@@ -40,7 +40,7 @@ function menuRight()
     //-//
 
     let maximizeButton = ce("button");
-    maximizeButton.innerHTML = "□";
+    maximizeButton.innerHTML = "O";
     maximizeButton.className = "buttonStyle001";
     maximizeButton.style.position = "absolute";
     maximizeButton.style.right = 0 + "px";
