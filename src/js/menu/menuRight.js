@@ -34,6 +34,7 @@ function menuRight()
     closeButton.style.position = "absolute";
     closeButton.style.right = 30 + "px";
     closeButton.style.top = -22 + "px";
+    closeButton.style.fontSize = '10px';
     closeButton.onclick = function()
     {
         audioPlay("sfx_warp_001", 1.0);
@@ -51,6 +52,7 @@ function menuRight()
     maximizeButton.textContent = "O";
     maximizeButton.className = "buttonStyle001";
     maximizeButton.style.position = "absolute";
+    maximizeButton.style.fontSize = '10px';
     maximizeButton.style.right = 0 + "px";
     maximizeButton.style.top = -22 + "px";
     maximizeButton.onclick = function()

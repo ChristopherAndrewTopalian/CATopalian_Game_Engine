@@ -29,15 +29,19 @@ let menuFunctions =
 
 function menuLeft()
 {
-    if (ge("menuLeftDiv"))
+    let menuId = 'menuLeftDiv';
+
+    // if menuId exists
+    if (ge(menuId))
     {
-        ge("menuLeftDiv").remove();
+        // remove menuId
+        ge(menuId).remove();
     }
 
     let divHeight = 90;
 
     let menuLeftDiv = ce("div");
-    menuLeftDiv.id = "menuLeftDiv";
+    menuLeftDiv.id = menuId;
     menuLeftDiv.style.position = "fixed";
     menuLeftDiv.style.left = 0 + "px";
     menuLeftDiv.style.top = 20 + "px";
@@ -48,11 +52,12 @@ function menuLeft()
     //-//
 
     let minimizeButton = ce("button");
-    minimizeButton.innerHTML = "_";
+    minimizeButton.textContent = "_";
     minimizeButton.className = "buttonStyle001";
     minimizeButton.style.position = "absolute";
     minimizeButton.style.left = 0 + "px";
     minimizeButton.style.top = -22 + "px";
+    minimizeButton.style.fontSize = '10px';
     minimizeButton.onclick = function()
     {
         audioPlay("sfx_warp_001", 1.0);
@@ -67,11 +72,12 @@ function menuLeft()
     //-//
 
     let maximizeButton = ce("button");
-    maximizeButton.innerHTML = "O";
+    maximizeButton.textContent = "O";
     maximizeButton.className = "buttonStyle001";
     maximizeButton.style.position = "absolute";
     maximizeButton.style.left = 30 + "px";
     maximizeButton.style.top = -22 + "px";
+    maximizeButton.style.fontSize = '10px';
     maximizeButton.onclick = function()
     {
         audioPlay("sfx_warp_001", 1.0);
