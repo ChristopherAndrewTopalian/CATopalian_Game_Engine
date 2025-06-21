@@ -4,7 +4,7 @@ function makeMinimap()
 {
     let minMaxContainer = ce('div');
     minMaxContainer.style.position = 'fixed';
-    minMaxContainer.style.left = '160px';
+    minMaxContainer.style.left = '110px';
     minMaxContainer.style.bottom = '0px';
     minMaxContainer.style.zIndex = 2001;
     minMaxContainer.style.display = 'flex';
