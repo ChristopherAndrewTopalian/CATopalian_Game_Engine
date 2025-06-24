@@ -21,6 +21,7 @@ Features
 * Odometer
 * Draggable Elements
 * Tile Making
+* Map Editor
 
 ---
 
