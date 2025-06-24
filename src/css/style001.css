@@ -37,6 +37,33 @@ video
     border-color: rgb(255, 255, 255);
 }
 
+button
+{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-left: 2px;
+    padding-right: 2px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 8px;
+    border-color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+}
+
+button:hover
+{
+    border-color: rgb(0, 255, 255);
+}
+
+button:active
+{
+    color: rgb(255, 0, 255);
+}
+
 .instructions
 {
     margin: 2px;
@@ -113,7 +140,7 @@ video
     width: 1535;
     height: 912px;
     z-index: 3;
-    background-image: url("src/media/textures/periodicTable.png");
+    /*background-image: url("src/media/textures/periodicTable.png");*/
     background-size: cover;
 }
 
@@ -245,5 +272,5 @@ video
 /* All Rights Reserved Christopher Andrew Topalian Copyright 2000-2025 */
 /* https://github.com/ChristopherTopalian */
 /* https://github.com/ChristopherAndrewTopalian */
-/* // https://sites.google.com/view/CollegeOfScripting */
+/* https://sites.google.com/view/CollegeOfScripting */
 

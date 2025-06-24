@@ -13,8 +13,8 @@ function gameLoop()
     // text update of player position
     if (ge('xPosDiv') && ge('yPosDiv'))
     {
-        ge('xPosDiv').innerHTML = ourPlayer.x;
-        ge('yPosDiv').innerHTML = ourPlayer.y;
+        ge('xPosDiv').textContent = ourPlayer.x;
+        ge('yPosDiv').textContent = ourPlayer.y;
     }
 
     //-//

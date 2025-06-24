@@ -48,6 +48,20 @@ function hoverSound()
     );
 }
 
+function hoverSound2()
+{
+    playTone(
+        200,     // frequency
+        100,     // duration
+        'sine',  // waveType
+        0.1,      // volume
+        0,       // detune
+        0.05,      // attackTime
+        0.05,      // releaseTime
+        0.0      // panValue -0.5 is left
+    );
+}
+
 function clickSound()
 {
     playTone(

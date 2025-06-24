@@ -30,6 +30,12 @@ function ct(whichText)
     return result;
 }
 
+function gr(whichId)
+{
+    let result =  ge(whichId).getBoundingClientRect();
+    return result;
+}
+
 //----//
 
 // Dedicated to God the Father

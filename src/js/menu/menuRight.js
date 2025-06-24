@@ -1,5 +1,7 @@
 // menuRight.js
 
+let result = [];
+
 function menuRight()
 {
     let menuId = 'menuRight';
@@ -81,10 +83,52 @@ function menuRight()
     menuRightSubDiv.style.borderColor = 'rbg(255, 255, 255)';
     menuRightSubDiv.style.borderRadius = '8px';
     menuRightSubDiv.style.backgroundColor = "rgba(0, 0, 0, 0.4)";
-    menuRightSubDiv.style.overflowY = "auto";
+    menuRightSubDiv.style.overflowY = "scroll";
     menuRightSubDiv.style.resize = "both";
-    menuRightSubDiv.style.whiteSpace = 'nowrap';
+    //menuRightSubDiv.style.whiteSpace = 'nowrap';
+    menuRightSubDiv.style.display = 'flex';
+    menuRightSubDiv.style.flexDirection = 'column';
+    menuRightSubDiv.style.padding = 2 + 'px';
     ba(menuRightSubDiv);
+
+    //-//
+
+    // build
+    let buildOnButton = ce('button');
+    buildOnButton.textContent = 'Build On';
+    buildOnButton.onclick = function()
+    {
+        // open floors menu
+        menuFloors(floors);
+
+        // minimize height to show only _ and O
+        ge("menuRightSubDiv").style.height = 0 + "px";
+
+        ge("menuRightSubDiv").style.display = 'none';
+    };
+    menuRightSubDiv.append(buildOnButton);
+
+    //-//
+
+    // save locations
+    let saveButton = ce('button');
+    saveButton.textContent = 'Save All';
+    saveButton.onclick = function()
+    {
+        let floors = document.querySelectorAll('.floor');
+
+        for (let x = 0; x < floors.length; x++)
+        {
+            result.push(
+                {
+                    name: floors[x].id,
+                    x: floors[x].style.left, y: floors[x].style.top
+                }
+            );
+        }
+        cl(JSON.stringify(result));
+    };
+    menuRightSubDiv.append(saveButton);
 
     //-//
 

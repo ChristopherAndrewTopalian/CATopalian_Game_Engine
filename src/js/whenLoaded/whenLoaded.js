@@ -56,8 +56,7 @@ function whenLoaded()
 
     makeElementInfoBox();
 
-    makeXPosDiv();
-    makeYPosDiv();
+    makeLocationDiv();
 
     makeInstructions();
 
@@ -66,6 +65,8 @@ function whenLoaded()
     makeObjectsToScreen(objectsTriggers);
     makeObjectsToScreen(objectsPart2);
     makeObjectsToScreen(objectsPart3);
+
+    // makeFloors(result);
 
     // whichArray, xPos, yPos, sizeX, sizeY
     makeRowOfWebsitesPdfsOrVideos(dataVideosChemistry, 2465, 670, 550, 550);
