@@ -25,21 +25,21 @@ function theControls(e)
     {
         audioPlay("Action_Strike", 0.5);
 
-        ge('infoDiv').innerHTML = "Song Playing";
+        ge('infoDiv').textContent = "Song Playing";
     }
 
     if (e.keyCode == 66) // Press Letter b
     {
         audioPause("Action_Strike", 0.5);
 
-        ge('infoDiv').innerHTML = "Song Stopped";
+        ge('infoDiv').textContent = "Song Stopped";
     }
 
     if (e.keyCode == 27) // Press Esc
     {
         audioPause("Action_Strike");
 
-        ge('infoDiv').innerHTML = "Song Stopped";
+        ge('infoDiv').textContent = "Song Stopped";
     }
 
     // TRANSPARENCY

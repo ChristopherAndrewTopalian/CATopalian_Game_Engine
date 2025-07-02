@@ -62,7 +62,7 @@ function wasLineCrossed()
         {
             audioPlay("sfx_crystal_bell_001", 1.0);
 
-            ge('infoDiv').innerHTML = "2830 Y Crossed";
+            ge('infoDiv').textContent = "2830 Y Crossed";
 
             ge('minimap').style.borderColor = collisionColor001;
 
@@ -89,7 +89,7 @@ function wasLineCrossed()
         {
             audioPlay("sfx_crystal_bell_001", 1.0);
 
-            ge('infoDiv').innerHTML = "5730 Y Crossed";
+            ge('infoDiv').textContent = "5730 Y Crossed";
 
             ge('minimap').style.borderColor = collisionColor001;
 

@@ -37,7 +37,7 @@ function wasObjectLineCrossed(whichPlayer)
 
             ge('minimap').style.borderColor = collisionColor001;
 
-            ge('infoDiv').innerHTML = "boxCarbonTrigger X Crossed";
+            ge('infoDiv').textContent = "boxCarbonTrigger X Crossed";
 
             setTimeout(function()
             {
@@ -58,7 +58,7 @@ function wasObjectLineCrossed(whichPlayer)
 
                 ge('minimap').style.borderColor = collisionColor001;
 
-                ge('infoDiv').innerHTML = "boxNitrogenTrigger X Crossed";
+                ge('infoDiv').textContent = "boxNitrogenTrigger X Crossed";
 
                 ge("boxNitrogenTrigger").style.backgroundColor = collisionColor002;
 
