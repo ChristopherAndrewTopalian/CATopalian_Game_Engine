@@ -168,11 +168,7 @@ function menuLeft()
     };
     menuLeftSubDiv.append(pauseSongButton);
 
-
-
     //-//
-
-
 
     // create output display
     let output = ce('div');
