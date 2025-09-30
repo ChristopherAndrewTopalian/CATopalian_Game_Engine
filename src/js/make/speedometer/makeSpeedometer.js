@@ -7,13 +7,13 @@ function makeSpeedometer()
     speedometerDiv.textContent = 'Speed';
     speedometerDiv.className = 'textStyle001';
     speedometerDiv.title = 'makeSpeedometer()';
-    speedometerDiv.style.position = 'fixed';
-    speedometerDiv.style.right = '0px';
-    speedometerDiv.style.bottom = '150px';
-    speedometerDiv.style.zIndex = 1000;
+    //speedometerDiv.style.position = 'fixed';
+    //speedometerDiv.style.right = '0px';
+    //speedometerDiv.style.bottom = '150px';
+    //speedometerDiv.style.zIndex = 1000;
     speedometerDiv.style.textAlign = 'right';
     speedometerDiv.style.textShadow = '1px 1px #000000';
-    ba(speedometerDiv);
+    ge('rightPanel').append(speedometerDiv);
 }
 
 //----//

@@ -19,8 +19,10 @@ function whenLoaded()
 
     makeCollisionDiv();
 
+    // buildInterface
+    makeRightPanel();
+    makeLocationDiv();
     makeIsMovingDiv();
-
     makeDistanceTraveledDiv();
 
     makeSpeedometer();
@@ -55,8 +57,6 @@ function whenLoaded()
     menuRight();
 
     makeElementInfoBox();
-
-    makeLocationDiv();
 
     makeInstructions();
 
@@ -103,6 +103,9 @@ function whenLoaded()
 
     // listen for keyup events
     document.addEventListener("keyup", theControls, false);
+
+    ge("menuLeftSubDiv").style.height = "0px";
+    ge("menuLeftSubDiv").style.display = "none";
 
     // start gameLoop
     gameLoop();
