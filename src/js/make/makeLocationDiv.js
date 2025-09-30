@@ -5,7 +5,7 @@ function makeLocationDiv()
     let container = ce('div');
     container.style.position = 'fixed';
     container.style.right = '0px';
-    container.style.top = '50px';
+    container.style.top = '30px';
     container.style.zIndex = 1000;
     container.style.display = 'flex';
     container.style.flexDirection = 'column';
