@@ -15,6 +15,8 @@ body
     background-color: rgb(0, 0, 0);
     font-family: Arial;
     color: rgb(255, 255, 255);
+    background-image: url('src/media/textures/screenshots/001.PNG');
+    background-size: cover;
 }
 
 </style>
@@ -74,13 +76,19 @@ function makeAppLink()
     let mainDiv = ce('div');
     mainDiv.style.display = 'flex';
     mainDiv.style.flexDirection = 'column';
+    mainDiv.style.display = 'grid';
+    mainDiv.style.placeItems = 'center';
+    mainDiv.style.border = 'dotted 2px rgb(255, 255, 255)';
+    mainDiv.style.backgroundColor = 'rgb(0, 0, 100)';
     mainDiv.style.margin = 10 + 'px';
+    mainDiv.style.padding = 10 + 'px';
     ba(mainDiv);
 
     //-//
 
     let instructions = ce('div');
     instructions.textContent = 'Click on the Link Below to Open the Application';
+    instructions.style.color = 'rgb(0, 255, 255)';
     mainDiv.append(instructions);
 
     //-//
@@ -90,6 +98,8 @@ function makeAppLink()
     appLink.textContent = 'Start Application';
     appLink.style.fontSize = 50 + 'px';
     appLink.style.fontWeight = 'bold';
+    appLink.style.color = 'rgb(0, 255, 255)';
+    //appLink.style.textDecoration = 'none';
     mainDiv.append(appLink);
 }
 
