@@ -14,10 +14,10 @@ function makeRowOfWebsitesPdfsOrVideos(whichArray, xPos, yPos, sizeX, sizeY)
         let theFrame = ce("iframe");
         theFrame.src = whichArray[x].url;
         theFrame.style.position = "absolute";
-        theFrame.style.left = xPos;
-        theFrame.style.top = yPos;
-        theFrame.style.width = sizeX;
-        theFrame.style.height = sizeY;
+        theFrame.style.left = xPos + 'px';
+        theFrame.style.top = yPos + 'px';
+        theFrame.style.width = sizeX + 'px';
+        theFrame.style.height = sizeY + 'px';
         theFrame.style.zIndex = "2";
         theFrame.style.background = "rgb(0, 0, 0)";
         theFrame.style.fontFamily = "tahoma";
@@ -32,7 +32,7 @@ function makeRowOfWebsitesPdfsOrVideos(whichArray, xPos, yPos, sizeX, sizeY)
 //----//
 
 // Dedicated to God the Father
-// All Rights Reserved Christopher Andrew Topalian Copyright 2000-2025
+// All Rights Reserved Christopher Andrew Topalian Copyright 2000-2026
 // https://github.com/ChristopherTopalian
 // https://github.com/ChristopherAndrewTopalian
 // https://sites.google.com/view/CollegeOfScripting

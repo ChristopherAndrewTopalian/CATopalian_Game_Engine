@@ -11,8 +11,8 @@ function makeInstructions()
     let detailsInstructions = ce('details');
     detailsInstructions.className = 'instructions';
     detailsInstructions.style.position = 'fixed';
-    detailsInstructions.style.top = 1;
-    detailsInstructions.style.left = 80;
+    detailsInstructions.style.top = '0px';
+    detailsInstructions.style.left = '80px';
     detailsInstructions.style.maxWidth = '275px';
     detailsInstructions.style.maxHeight = '125px';
     instructionsMainDiv.append(detailsInstructions);
@@ -46,7 +46,7 @@ function makeInstructions()
 //----//
 
 // Dedicated to God the Father
-// All Rights Reserved Christopher Andrew Topalian Copyright 2000-2025
+// All Rights Reserved Christopher Andrew Topalian Copyright 2000-2026
 // https://github.com/ChristopherTopalian
 // https://github.com/ChristopherAndrewTopalian
 // https://sites.google.com/view/CollegeOfScripting

@@ -20,10 +20,10 @@ function makeTiles(theTexture, rows, columns, xPos, yPos, sizeX, sizeY)
             let makeTile = ce("img");
             makeTile.src = theTexture;
             makeTile.style.position = "absolute";
-            makeTile.style.left = xPos;
-            makeTile.style.top = yPos;
-            makeTile.style.width = sizeX;
-            makeTile.style.height = sizeY;
+            makeTile.style.left = xPos + 'px';
+            makeTile.style.top = yPos + 'px';
+            makeTile.style.width = sizeX + 'px';
+            makeTile.style.height = sizeY + 'px';
             makeTile.style.color = "rgb(255, 255, 255)";
             makeTile.style.zIndex = "1";
             makeTile.style.fontFamily = "tahoma";
@@ -42,7 +42,7 @@ function makeTiles(theTexture, rows, columns, xPos, yPos, sizeX, sizeY)
 //----//
 
 // Dedicated to God the Father
-// All Rights Reserved Christopher Andrew Topalian Copyright 2000-2025
+// All Rights Reserved Christopher Andrew Topalian Copyright 2000-2026
 // https://github.com/ChristopherTopalian
 // https://github.com/ChristopherAndrewTopalian
 // https://sites.google.com/view/CollegeOfScripting

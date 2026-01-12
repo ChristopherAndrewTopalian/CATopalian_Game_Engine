@@ -5,10 +5,10 @@ function makePlayer(whichPlayer)
     let player = ce('div');
     player.id = whichPlayer.id;
     player.style.position = 'absolute';
-    player.style.left = whichPlayer.x;
-    player.style.top = whichPlayer.y;
-    player.style.width = whichPlayer.width;
-    player.style.height = whichPlayer.height;
+    player.style.left = whichPlayer.x + 'px';
+    player.style.top = whichPlayer.y + 'px';
+    player.style.width = whichPlayer.width + 'px';
+    player.style.height = whichPlayer.height + 'px';
     player.style.borderRadius = '0px';
     player.style.background = whichPlayer.texture;
     player.style.backgroundSize = 'cover';
@@ -28,7 +28,7 @@ function makePlayer(whichPlayer)
 //----//
 
 // Dedicated to God the Father
-// All Rights Reserved Christopher Andrew Topalian Copyright 2000-2025
+// All Rights Reserved Christopher Andrew Topalian Copyright 2000-2026
 // https://github.com/ChristopherTopalian
 // https://github.com/ChristopherAndrewTopalian
 // https://sites.google.com/view/CollegeOfScripting

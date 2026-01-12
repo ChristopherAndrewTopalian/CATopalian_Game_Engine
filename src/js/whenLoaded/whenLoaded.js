@@ -69,7 +69,7 @@ function whenLoaded()
     // makeFloors(result);
 
     // whichArray, xPos, yPos, sizeX, sizeY
-    makeRowOfWebsitesPdfsOrVideos(dataVideosChemistry, 2465, 670, 550, 550);
+    // makeRowOfWebsitesPdfsOrVideos(dataVideosChemistry, 2465, 670, 550, 550);
 
     // shows periodic table on one row
     // xPos, yPos, sizeX, sizeY
@@ -114,7 +114,7 @@ function whenLoaded()
 //----//
 
 // Dedicated to God the Father
-// All Rights Reserved Christopher Andrew Topalian Copyright 2000-2025
+// All Rights Reserved Christopher Andrew Topalian Copyright 2000-2026
 // https://github.com/ChristopherTopalian
 // https://github.com/ChristopherAndrewTopalian
 // https://sites.google.com/view/CollegeOfScripting
