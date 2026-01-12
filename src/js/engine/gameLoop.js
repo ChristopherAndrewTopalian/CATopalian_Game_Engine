@@ -4,6 +4,7 @@ function gameLoop()
 {
     playerMotion();
 
+    // camera follows thePlayer
     cameraFollowsPlayer();
 
     // gravity(9.8);
