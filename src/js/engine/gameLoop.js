@@ -90,13 +90,77 @@ function gameLoop()
 
     //-//
 
-    collisionTopSide(ourPlayer.id, "boxCollideTop");
+    if (collisionBottomSide(ourPlayer.id, "boxCollideBottom"))
+    {
+        audioPlay("sfx_blip_001", 1.0);
 
-    collisionBottomSide(ourPlayer.id, "boxCollideBottom");
+        ge('minimap').style.borderColor = collisionColor001;
 
-    collisionLeftSide(ourPlayer.id, "boxCollideLeft");
+        ge('boxCollideBottom').style.backgroundColor = collisionColor002;
 
-    collisionRightSide(ourPlayer.id, "boxCollideRight");
+        collidedElementId = 'boxCollideBottom';
+
+        setTimeout(function()
+        {
+            ge('boxCollideBottom').style.backgroundColor = "rgb(0, 0, 0)";
+
+            ge('minimap').style.borderColor = 'rgb(255, 255, 255)';
+        }, 500);
+    }
+
+    if(collisionTopSide(ourPlayer.id, "boxCollideTop"))
+    {
+        audioPlay("sfx_blip_001", 1.0);
+
+            ge('minimap').style.borderColor = collisionColor001;
+
+            ge('boxCollideTop').style.backgroundColor = collisionColor002;
+
+            collidedElementId = 'boxCollideTop';
+
+            setTimeout(function()
+            {
+                ge('minimap').style.borderColor = 'rgb(255, 255, 255)';
+
+                ge('boxCollideTop').style.backgroundColor = "rgb(0, 0, 0)";
+            }, 500);
+    }
+
+    if(collisionLeftSide(ourPlayer.id, "boxCollideLeft"))
+    {
+        audioPlay("sfx_blip_001", 1.0);
+
+            ge('minimap').style.borderColor = collisionColor001;
+
+            ge('boxCollideLeft').style.backgroundColor = collisionColor002;
+
+            collidedElementId = 'boxCollideLeft';
+
+            setTimeout(function()
+            {
+                ge('boxCollideLeft').style.backgroundColor = "rgb(0, 0, 0)";
+
+                ge('minimap').style.borderColor = 'rgb(255, 255, 255)';
+            }, 500);
+    }
+
+    if(collisionRightSide(ourPlayer.id, "boxCollideRight"))
+    {
+        audioPlay("sfx_blip_001", 1.0);
+
+        ge('minimap').style.borderColor = collisionColor001;
+
+        ge('boxCollideRight').style.backgroundColor = collisionColor002;
+
+            collidedElementId = 'boxCollideRight';
+
+            setTimeout(function()
+            {
+                ge('boxCollideRight').style.backgroundColor = "rgb(0, 0, 0)";
+
+                ge('minimap').style.borderColor = 'rgb(255, 255, 255)';
+            }, 500);
+    }
 
     //-//
 
