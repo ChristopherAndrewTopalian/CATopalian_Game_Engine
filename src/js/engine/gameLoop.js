@@ -79,14 +79,40 @@ function gameLoop()
 
     //-//
 
-    collision(ourPlayer.id, "floor1");
-    collision(ourPlayer.id, "floor2");
-    collision(ourPlayer.id, "floor3");
+    if(collision(ourPlayer.id, "floor1"))
+    {
+        pushPlayerFromCollision();
+    }
+    
+    if(collision(ourPlayer.id, "floor2"))
+    {
+        pushPlayerFromCollision();
+    }
+    
+    if(collision(ourPlayer.id, "floor3"))
+    {
+        pushPlayerFromCollision();
+    }
 
-    collision(ourPlayer.id, "boxIron");
-    collision(ourPlayer.id, "boxCopper");
-    collision(ourPlayer.id, "boxSilver");
-    collision(ourPlayer.id, "boxGold");
+    if(collision(ourPlayer.id, "boxIron"))
+    {
+        pushPlayerFromCollision();
+    }
+    
+    if(collision(ourPlayer.id, "boxCopper"))
+    {
+        pushPlayerFromCollision();
+    }
+
+    if(collision(ourPlayer.id, "boxSilver"))
+    {
+        pushPlayerFromCollision();
+    }
+
+    if(collision(ourPlayer.id, "boxGold"))
+    {
+        pushPlayerFromCollision();
+    }
 
     //-//
 
@@ -112,36 +138,36 @@ function gameLoop()
     {
         audioPlay("sfx_blip_001", 1.0);
 
-            ge('minimap').style.borderColor = collisionColor001;
+        ge('minimap').style.borderColor = collisionColor001;
 
-            ge('boxCollideTop').style.backgroundColor = collisionColor002;
+        ge('boxCollideTop').style.backgroundColor = collisionColor002;
 
-            collidedElementId = 'boxCollideTop';
+        collidedElementId = 'boxCollideTop';
 
-            setTimeout(function()
-            {
-                ge('minimap').style.borderColor = 'rgb(255, 255, 255)';
+        setTimeout(function()
+        {
+            ge('minimap').style.borderColor = 'rgb(255, 255, 255)';
 
-                ge('boxCollideTop').style.backgroundColor = "rgb(0, 0, 0)";
-            }, 500);
+            ge('boxCollideTop').style.backgroundColor = "rgb(0, 0, 0)";
+        }, 500);
     }
 
     if(collisionLeftSide(ourPlayer.id, "boxCollideLeft"))
     {
         audioPlay("sfx_blip_001", 1.0);
 
-            ge('minimap').style.borderColor = collisionColor001;
+        ge('minimap').style.borderColor = collisionColor001;
 
-            ge('boxCollideLeft').style.backgroundColor = collisionColor002;
+        ge('boxCollideLeft').style.backgroundColor = collisionColor002;
 
-            collidedElementId = 'boxCollideLeft';
+        collidedElementId = 'boxCollideLeft';
 
-            setTimeout(function()
-            {
-                ge('boxCollideLeft').style.backgroundColor = "rgb(0, 0, 0)";
+        setTimeout(function()
+        {
+            ge('boxCollideLeft').style.backgroundColor = "rgb(0, 0, 0)";
 
-                ge('minimap').style.borderColor = 'rgb(255, 255, 255)';
-            }, 500);
+            ge('minimap').style.borderColor = 'rgb(255, 255, 255)';
+        }, 500);
     }
 
     if(collisionRightSide(ourPlayer.id, "boxCollideRight"))
@@ -152,14 +178,14 @@ function gameLoop()
 
         ge('boxCollideRight').style.backgroundColor = collisionColor002;
 
-            collidedElementId = 'boxCollideRight';
+        collidedElementId = 'boxCollideRight';
 
-            setTimeout(function()
-            {
-                ge('boxCollideRight').style.backgroundColor = "rgb(0, 0, 0)";
+        setTimeout(function()
+        {
+            ge('boxCollideRight').style.backgroundColor = "rgb(0, 0, 0)";
 
-                ge('minimap').style.borderColor = 'rgb(255, 255, 255)';
-            }, 500);
+            ge('minimap').style.borderColor = 'rgb(255, 255, 255)';
+        }, 500);
     }
 
     //-//

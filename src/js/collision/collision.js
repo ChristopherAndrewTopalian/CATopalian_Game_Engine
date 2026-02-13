@@ -4,6 +4,12 @@ let collidedElementId;
 
 let isColliding = false;
 
+let collidedAny;
+let collidedLeft;
+let collidedRight;
+let collidedTop;
+let collidedBottom;
+
 function collision(obj1, obj2)
 {
     // if both objects exist
@@ -15,7 +21,7 @@ function collision(obj1, obj2)
         // get collision box of obj2
         let theRect2 = ge(obj2).getBoundingClientRect();
 
-        let collidedAny = (
+        collidedAny = (
             theRect1.right >= theRect2.left &&
             theRect1.left <= theRect2.right &&
             theRect1.bottom >= theRect2.top &&
@@ -23,49 +29,56 @@ function collision(obj1, obj2)
         );
 
         // collided left side
-        let collidedLeft = theRect1.left > theRect2.left || theRect1.right > theRect2.right;
+        collidedLeft = theRect1.left > theRect2.left || theRect1.right > theRect2.right;
 
         // collided right side
-        let collidedRight = theRect1.left < theRect2.left || theRect1.right < theRect2.right;
+        collidedRight = theRect1.left < theRect2.left || theRect1.right < theRect2.right;
 
         // collided top side
-        let collidedTop = theRect1.top > theRect2.top || theRect1.bottom > theRect2.bottom;
+        collidedTop = theRect1.top > theRect2.top || theRect1.bottom > theRect2.bottom;
 
         // collided bottom side
-        let collidedBottom = theRect1.top < theRect2.top || theRect1.bottom < theRect2.bottom;
+        collidedBottom = theRect1.top < theRect2.top || theRect1.bottom < theRect2.bottom;
 
         if (collidedAny)
         {
             isColliding = true;
-
+            
             collidedElementId = obj2;
 
-            audioPlay('sfx_blip_001', 1.0);
-
-            if (collidedLeft)
-            {
-                movePlayer(1,0);
-            }
-            if (collidedRight)
-            {
-                movePlayer(-1,0);
-            }
-            if (collidedTop)
-            {
-                movePlayer(0,1);
-            }
-            if (collidedBottom)
-            {
-                movePlayer(0,-1);
-            }
             return true;
         }
+        else
+        {
+            return false;
+        }
     }
+}
 
-    isColliding = false;
-
-    // if no collision
-    return null;
+function pushPlayerFromCollision()
+{
+    audioPlay('sfx_blip_001', 1.0);
+    
+    if (collidedAny)
+    {
+        if (collidedLeft)
+        {
+            movePlayer(1,0);
+        }
+        if (collidedRight)
+        {
+            movePlayer(-1,0);
+        }
+        if (collidedTop)
+        {
+            movePlayer(0,1);
+        }
+        if (collidedBottom)
+        {
+            movePlayer(0,-1);
+        }
+        return true;
+    }
 }
 
 //----//
