@@ -1,31 +1,35 @@
 // gameLoop.js
 
-// gameLoop.js
-
-function gameLoop() {
+function gameLoop()
+{
     playerMotion();
     cameraFollowsPlayer();
     // gravity(9.8); // Uncomment when ready
 
-    // 1. UI Updates -------------------------
-    if (ge('xPosDiv') && ge('yPosDiv')) {
+    // UI Updates 
+    if (ge('xPosDiv') && ge('yPosDiv'))
+    {
         ge('xPosDiv').textContent = ourPlayer.x;
         ge('yPosDiv').textContent = ourPlayer.y;
     }
 
-    if (ge('speedometerDiv')) {
+    if (ge('speedometerDiv'))
+    {
         ge('speedometerDiv').innerHTML = 'Speed' + '<br>' + updateSpeedometer().toFixed(3);
     }
     
     // Minimap updates
-    if (ge('minimap')) {
+    if (ge('minimap'))
+    {
         if (ge('minimapPlayer')) updateMinimapPlayer();
+
         if (ge('treasureCopper')) updateMinimapTreasure('minimapCopperIcon', 'treasureCopper');
+
         if (ge('treasureSilver')) updateMinimapTreasure('minimapSilverIcon', 'treasureSilver');
     }
 
-    // 2. Collision System -------------------
-    
+    // Collision System
+
     // Group 1: Standard Obstacles (Floors & Boxes)
     // We can loop through these to save space
     const obstacles = [
@@ -39,7 +43,8 @@ function gameLoop() {
         // Calculate the math ONCE
         let report = checkCollision(ourPlayer.id, id);
         
-        if (report.hit) {
+        if (report.hit)
+        {
             handlePhysics(report); // Move the player
             currentFrameCollision = id; // Remember what we hit for the UI
         }
@@ -50,14 +55,16 @@ function gameLoop() {
     
     // Bottom Test Box
     let bottomReport = checkCollision(ourPlayer.id, "boxCollideBottom");
-    if (bottomReport.hit) {
+
+    if (bottomReport.hit)
+    {
         handlePhysics(bottomReport);
         currentFrameCollision = "boxCollideBottom";
-        
-        // Custom visual logic from your original code
+
         if (bottomReport.side === 'bottom') { // Only trigger if we hit the bottom?
             ge('minimap').style.borderColor = collisionColor001;
             ge('boxCollideBottom').style.backgroundColor = collisionColor002;
+
             setTimeout(() => {
                 ge('boxCollideBottom').style.backgroundColor = "rgb(0, 0, 0)";
                 ge('minimap').style.borderColor = 'rgb(255, 255, 255)';
@@ -67,13 +74,17 @@ function gameLoop() {
 
     // Top Test Box
     let topReport = checkCollision(ourPlayer.id, "boxCollideTop");
-    if (topReport.hit) {
+
+    if (topReport.hit)
+    {
         handlePhysics(topReport);
         currentFrameCollision = "boxCollideTop";
 
-        if (topReport.side === 'top') {
+        if (topReport.side === 'top')
+        {
             ge('minimap').style.borderColor = collisionColor001;
             ge('boxCollideTop').style.backgroundColor = collisionColor002;
+
             setTimeout(() => {
                 ge('minimap').style.borderColor = 'rgb(255, 255, 255)';
                 ge('boxCollideTop').style.backgroundColor = "rgb(0, 0, 0)";
@@ -83,13 +94,17 @@ function gameLoop() {
 
     // Left Test Box
     let leftReport = checkCollision(ourPlayer.id, "boxCollideLeft");
-    if (leftReport.hit) {
+
+    if (leftReport.hit)
+    {
         handlePhysics(leftReport);
         currentFrameCollision = "boxCollideLeft";
 
-        if (leftReport.side === 'left') {
+        if (leftReport.side === 'left')
+        {
             ge('minimap').style.borderColor = collisionColor001;
             ge('boxCollideLeft').style.backgroundColor = collisionColor002;
+
             setTimeout(() => {
                 ge('boxCollideLeft').style.backgroundColor = "rgb(0, 0, 0)";
                 ge('minimap').style.borderColor = 'rgb(255, 255, 255)';
@@ -99,13 +114,17 @@ function gameLoop() {
 
     // Right Test Box
     let rightReport = checkCollision(ourPlayer.id, "boxCollideRight");
-    if (rightReport.hit) {
+
+    if (rightReport.hit)
+    {
         handlePhysics(rightReport);
         currentFrameCollision = "boxCollideRight";
 
-        if (rightReport.side === 'right') {
+        if (rightReport.side === 'right')
+        {
             ge('minimap').style.borderColor = collisionColor001;
             ge('boxCollideRight').style.backgroundColor = collisionColor002;
+
             setTimeout(() => {
                 ge('boxCollideRight').style.backgroundColor = "rgb(0, 0, 0)";
                 ge('minimap').style.borderColor = 'rgb(255, 255, 255)';
@@ -113,17 +132,20 @@ function gameLoop() {
         }
     }
 
-    // 3. Final UI Updates based on collisions
-    if (currentFrameCollision) {
+    // Final UI Updates based on collisions
+    if (currentFrameCollision)
+    {
         collidedElementId = currentFrameCollision;
-    } else {
+    }
+    else
+    {
         collidedElementId = "No Collision";
     }
 
     if (ge('infoDiv')) ge('infoDiv').innerHTML = collidedElementId;
     if (ge('collisionInfoDiv')) ge('collisionInfoDiv').innerHTML = collidedElementId;
 
-    // 4. Cleanup
+    // Cleanup
     wasObjectLineCrossed(ourPlayer);
     wasLineCrossed();
     keepPlayerInWorld();
