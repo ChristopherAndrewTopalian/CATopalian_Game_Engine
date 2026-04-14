@@ -11,7 +11,7 @@ let ourPlayer =
     speedMultiplier: 2,
     id: 'thePlayer',
     playerColor: 'rgb(73, 100, 150)',
-    texture: 'url("src/media/textures/player001.png")',
+    texture: 'url("src/media/textures/swords_man/run_sprite_sheet.png")',
     texturePos: '0% 0%',
     velocityY: 0,
 };
@@ -43,6 +43,13 @@ let distanceTraveled = 0;
 
 // initial player speed
 let playerSpeed = 0;
+
+// player animation
+let currentFrame = 0;
+const totalRunFrames = 6; // matches top row
+const frameWidth = 100;   
+let runAnimationTimer = null;
+let isRunning = false;
 
 //----//
 
