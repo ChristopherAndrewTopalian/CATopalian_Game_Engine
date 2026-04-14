@@ -2,7 +2,7 @@
 
 function playerMotion()
 {
-    // --- 1. HORIZONTAL MOVEMENT & ANIMATION ---
+    // HORIZONTAL MOVEMENT & ANIMATION
     if (keyboard[keyboard.LEFT])
     {
         movePlayer(-1, 0);
@@ -26,8 +26,8 @@ function playerMotion()
             runAnimationTimer = setInterval(updateSpriteFrame, 100);
         }
     }
-    
-    // --- 2. VERTICAL MOVEMENT ---
+
+    // VERTICAL MOVEMENT
     if (keyboard[keyboard.UP])
     {
         movePlayer(0, -1);
@@ -37,7 +37,7 @@ function playerMotion()
         movePlayer(0, 1);
     }
 
-    // --- 3. BOOST SPEEDS ---
+    // BOOST SPEEDS
     if (keyboard[keyboard.LEFT] && keyboard[keyboard.SHIFT])
     {
         movePlayer(-2, 0);
@@ -55,8 +55,8 @@ function playerMotion()
         movePlayer(0, 2);
     }
 
-    // --- 4. THE IDLE CHECK (THE FIX) ---
-    // Instead of an 'else', we explicitly check if the horizontal keys are released
+    // THE IDLE CHECK
+    // we explicitly check if the horizontal keys are released
     if (!keyboard[keyboard.LEFT] && !keyboard[keyboard.RIGHT])
     {
         if (isRunning)
