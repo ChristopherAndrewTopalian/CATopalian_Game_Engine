@@ -17,19 +17,29 @@ function playTone(frequency, duration, waveType, volume, detune, attackTime, rel
     gainNode.connect(pannerNode);
     pannerNode.connect(audioCtx.destination);
 
+    // Convert milliseconds to seconds for the audio context
+    let durationInSeconds = duration / 1000;
+
+    // THE ENVELOPE (Attack, Sustain, Release)
+
+    // Initialize volume at 0
     gainNode.gain.setValueAtTime(0, audioCtx.currentTime);
 
-    // attack
+    // Attack: Ramp up to the target volume
     gainNode.gain.linearRampToValueAtTime(volume, audioCtx.currentTime + attackTime);
-    gainNode.gain.linearRampToValueAtTime(0, 
 
-    // release
-    audioCtx.currentTime + duration / 1000 - releaseTime);
+    // Sustain: Hold the target volume until it is time to release
+    gainNode.gain.setValueAtTime(volume, audioCtx.currentTime + durationInSeconds - releaseTime);
 
+    // Release: Ramp the volume back down to 0
+    gainNode.gain.linearRampToValueAtTime(0, audioCtx.currentTime + durationInSeconds);
+
+    // Set stereo panning
     pannerNode.pan.setValueAtTime(panValue, audioCtx.currentTime);
 
-    oscillator.start();
-    oscillator.stop(audioCtx.currentTime + duration / 1000);
+    // Start and stop the oscillator
+    oscillator.start(audioCtx.currentTime);
+    oscillator.stop(audioCtx.currentTime + durationInSeconds);
 }
 
 // 'sine', 'square', 'sawtooth', 'triangle'
