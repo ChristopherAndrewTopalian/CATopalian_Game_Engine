@@ -1,4 +1,4 @@
-   Copyright (c) 2026-present Christopher Andrew Topalian
+   Copyright (c) 2020-2026-present Christopher Andrew Topalian
    
    Apache License
    Version 2.0, January 2004
@@ -188,7 +188,7 @@
       same "printed page" as the copyright notice for easier
       identification within third-party archives.
 
-   Copyright (c) 2026-present Christopher Andrew Topalian
+   Copyright (c) 2020-2026-present Christopher Andrew Topalian
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
